@@ -19,7 +19,8 @@ enum class TokenType {
     QUERIES,
     ID,
     STRING,
-    COMMENT,
+    BLOCKCOMMENT,
+    LINECOMMENT,
     END,//FIXME MAYBE
     UNDEFINED
 };
@@ -35,13 +36,13 @@ public:
     // TODO: add other needed methods
 
     //my added code//
-    setType(TokenType type);
-    setDescription(std::string description);
-    setLine(int line);
-    returnType();
-    returnDescription();
-    returnLine();
-    toString();
+    void setType(TokenType type);
+    void setDescription(std::string description);
+    void setLine(int line);
+    TokenType returnType();
+    std::string returnDescription();
+    int returnLine();
+    void toString();
     //end added code//
 };
 
