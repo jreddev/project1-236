@@ -12,9 +12,9 @@ void LineCommentAutomaton::S0(const std::string& input) {
 }
 
 void LineCommentAutomaton::S1(const std::string& input) {
-    if (input[index]=='|') {
+    /*if (input[index]=='|') {
         Serr();
-    }
+    }*/
     else if (input[index] != '\n') {
         inputRead++;
         index++;
