@@ -130,7 +130,7 @@ void Lexer::Run(std::string& input) {
     }
     std::cout << "Total Tokens = ";
     std::cout << tokenVectorSize;
-    std::cout << "\n";
+    //std::cout << "\n";
 //END MY ADDED CODE//
         // TODO: you need to handle whitespace inbetween tokens
 
