@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="project1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/jared/CS236/project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/jared/CS236/project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project1">
+				<Option output="C:/Users/jared/CS236/project1/cmake-build-debug/project1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jared/CS236/project1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/jared/CS236/project1/."/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 project1"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project1/fast">
+				<Option output="C:/Users/jared/CS236/project1/cmake-build-debug/project1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jared/CS236/project1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/jared/CS236/project1/."/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 project1/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/jared/CS236/project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\jared\CS236\project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/jared/CS236/project1/AddAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/AddAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Automaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/BlockCommentAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/BlockCommentAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/ColonAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/ColonAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/ColonDashAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/ColonDashAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/CommaAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/CommaAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/EOFAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/EOFAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/FactsAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/FactsAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/IdAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/IdAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Left_ParenAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Left_ParenAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Lexer.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Lexer.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/LineCommentAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/LineCommentAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/MultiplyAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/MultiplyAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/PeriodAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/PeriodAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Q_MarkAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Q_MarkAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/QueriesAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/QueriesAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Right_ParenAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Right_ParenAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/RulesAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/RulesAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/SchemesAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/SchemesAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/StringAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/StringAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Token.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Token.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/UndefinedAutomaton.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/UndefinedAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/main.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
