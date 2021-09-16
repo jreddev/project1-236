@@ -17,8 +17,12 @@ add_executable(project1
         ColonDashAutomaton.h
         CommaAutomaton.cpp
         CommaAutomaton.h
+        EOFAutomaton.cpp
+        EOFAutomaton.h
         FactsAutomaton.cpp
         FactsAutomaton.h
+        IdAutomaton.cpp
+        IdAutomaton.h
         Left_ParenAutomaton.cpp
         Left_ParenAutomaton.h
         Lexer.cpp
@@ -43,4 +47,6 @@ add_executable(project1
         StringAutomaton.cpp
         StringAutomaton.h
         Token.cpp
-        Token.h)
+        Token.h
+        UndefinedAutomaton.cpp
+        UndefinedAutomaton.h)
