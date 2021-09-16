@@ -25,6 +25,10 @@ void StringAutomaton::S1(const std::string& input) {
         SFail(input);
     }
     else {
+        if(input[index] == '\n'){
+            newLines++;
+
+        }
         inputRead++;
         index++;
         S1(input);
@@ -41,7 +45,10 @@ void StringAutomaton::S2(const std::string& input) {
         SFail(input);
     }
     else {
+       /* if(input[index] == '\n'){
+            newLines++;
 
+        }*/
     }
 }
 void StringAutomaton::SFail(const std::string& input){

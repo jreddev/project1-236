@@ -93,6 +93,10 @@ void Lexer::Run(std::string& input) {
                     int addLines = automata[5]->NewLinesRead();
                     lineNumber = lineNumber + addLines;
                 }
+                if (maxAutomaton == automata[17]){
+                    int addLines = automata[17]->NewLinesRead();
+                    lineNumber = lineNumber + addLines;
+                }
                 std::string tokenString = input.substr(0,maxRead);
                 Token* newToken = maxAutomaton->CreateToken(tokenString, lineNumber);
                 tokens.push_back(newToken);
