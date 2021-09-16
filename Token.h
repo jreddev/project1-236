@@ -85,8 +85,8 @@ public:
             case TokenType::QUERIES: return "QUERIES"; break;
             case TokenType::ID: return "ID"; break;
             case TokenType::STRING: return "STRING"; break;
-            case TokenType::BLOCKCOMMENT: return "BLOCKCOMMENT"; break;
-            case TokenType::LINECOMMENT: return "LINECOMMENT"; break;
+            case TokenType::BLOCKCOMMENT: return "COMMENT"; break;
+            case TokenType::LINECOMMENT: return "COMMENT"; break;
             case TokenType::END: return "EOF"; break;//FIXME MAYBE
             case TokenType::UNDEFINED: return "UNDEFINED"; break;
         }

@@ -21,6 +21,10 @@ void LineCommentAutomaton::S1(const std::string& input) {
         S1(input);
     }
     else {
-        Serr();
+
     }
+}
+
+void LineCommentAutomaton::SFail(const std::string& input) {
+    type = TokenType::UNDEFINED;
 }

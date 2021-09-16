@@ -8,6 +8,7 @@ class LineCommentAutomaton : public Automaton
 private:
     void S1(const std::string& input);
     void S2(const std::string& input);
+    void SFail(const std::string& input);
 
 public:
     LineCommentAutomaton() : Automaton(TokenType::LINECOMMENT) {}  // Call the base constructor

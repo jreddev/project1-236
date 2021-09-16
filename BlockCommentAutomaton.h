@@ -15,6 +15,7 @@ public:
     BlockCommentAutomaton() : Automaton(TokenType::BLOCKCOMMENT) {}  // Call the base constructor
 
     void S0(const std::string& input);
+
 };
 
 #endif // BLOCKCOMMENTAUTOMATON_H
