@@ -101,13 +101,14 @@ void Lexer::Run(std::string& input) {
                 std::string tokenString = input.substr(0,1);//FIXME : for undefined I need to make it so it works for strings and comments that never end.
                 Token* newToken = undefinedAutomaton->CreateToken(tokenString, lineNumber);
                 tokens.push_back(newToken);
+                maxRead = 1;
             }
             int eraseValue = maxRead;
             input.erase(0,eraseValue);
         }
 
     }
-    lineNumber++;
+    //lineNumber++;//fixme
     Token* newToken = eofAutomata->CreateToken("", lineNumber);//FIXME : maybe need to change "EOF".. no se.
     tokens.push_back(newToken);
 
@@ -117,6 +118,7 @@ void Lexer::Run(std::string& input) {
     }
     std::cout << "Total Tokens = ";
     std::cout << tokenVectorSize;
+    std::cout << "\n";
 //END MY ADDED CODE//
         // TODO: you need to handle whitespace inbetween tokens
 
