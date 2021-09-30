@@ -1,9 +1,12 @@
 #include "Lexer.h"
+#include "Parser.h"
+#include <vector>
 
 
 int main(int argc, char** argv) {
 
     Lexer* lexer = new Lexer();
+
 
     // TODO
 
@@ -24,8 +27,11 @@ int main(int argc, char** argv) {
     inFile.close();
 
     lexer->Run(inputString);
+    std::vector<Token*> tokens = lexer->tokens;
     //END MY ADDED CODE//
 
+    Parser* parser = new Parser(tokens);
+    parser->Run();
 
     delete lexer;
 

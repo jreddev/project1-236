@@ -51,11 +51,11 @@ class Token
 {
 private:
     // TODO: add member variables for information needed by Token
+
+public:
     std::string value;
     int lineNumber;
     TokenType myType;
-
-public:
     Token(TokenType type, std::string description, int line);
 
     // TODO: add other needed methods

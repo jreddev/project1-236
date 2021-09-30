@@ -17,6 +17,8 @@ add_executable(project1
         ColonDashAutomaton.h
         CommaAutomaton.cpp
         CommaAutomaton.h
+        DatalogProgram.cpp
+        DatalogProgram.h
         EOFAutomaton.cpp
         EOFAutomaton.h
         FactsAutomaton.cpp
@@ -34,12 +36,20 @@ add_executable(project1
         MultiplyAutomaton.h
         PeriodAutomaton.cpp
         PeriodAutomaton.h
+        Parameter.cpp
+        Parameter.h
+        Parser.cpp
+        Parser.h
+        Predicate.cpp
+        Predicate.h
         Q_MarkAutomaton.cpp
         Q_MarkAutomaton.h
         QueriesAutomaton.cpp
         QueriesAutomaton.h
         Right_ParenAutomaton.cpp
         Right_ParenAutomaton.h
+        Rule.cpp
+        Rule.h
         RulesAutomaton.cpp
         RulesAutomaton.h
         SchemesAutomaton.cpp

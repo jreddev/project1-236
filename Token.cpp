@@ -18,8 +18,7 @@ void Token::setLine(int line){
     lineNumber = line;
 }
 TokenType Token::returnType() {
-    TokenType fixmeToken = TokenType::ID;// FIXME read below, haha.
-    return fixmeToken; //FIXME this is just for now, needs to actually return something real in the future, haha.
+    return myType;
 }
 std::string Token::returnDescription(){
     std::string fixmeString; //FIXME !!!!!!

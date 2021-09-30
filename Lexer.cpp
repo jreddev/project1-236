@@ -124,12 +124,12 @@ void Lexer::Run(std::string& input) {
     Token* newToken = eofAutomata->CreateToken("", lineNumber);//FIXME : maybe need to change "EOF".. no se.
     tokens.push_back(newToken);
 
-    int tokenVectorSize = tokens.size();
+    /*int tokenVectorSize = tokens.size();
     for (int i = 0; i < tokenVectorSize; i++){
         tokens[i]->toString();
     }
     std::cout << "Total Tokens = ";
-    std::cout << tokenVectorSize;
+    std::cout << tokenVectorSize;*/
     //std::cout << "\n";
 //END MY ADDED CODE//
         // TODO: you need to handle whitespace inbetween tokens

@@ -8,7 +8,6 @@ class Lexer
 {
 private:
     std::vector<Automaton*> automata;
-    std::vector<Token*> tokens;
 
     void CreateAutomata();
 
@@ -22,6 +21,7 @@ public:
     
     // TODO: add other public methods here
 
+    std::vector<Token*> tokens;
 };
 
 #endif // LEXER_H

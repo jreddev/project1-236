@@ -117,6 +117,12 @@
 		<Unit filename="C:/Users/jared/CS236/project1/CommaAutomaton.h">
 			<Option target="project1"/>
 		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/DatalogProgram.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/DatalogProgram.h">
+			<Option target="project1"/>
+		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/EOFAutomaton.cpp">
 			<Option target="project1"/>
 		</Unit>
@@ -159,10 +165,28 @@
 		<Unit filename="C:/Users/jared/CS236/project1/MultiplyAutomaton.h">
 			<Option target="project1"/>
 		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Parameter.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Parameter.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Parser.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Parser.h">
+			<Option target="project1"/>
+		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/PeriodAutomaton.cpp">
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/PeriodAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Predicate.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Predicate.h">
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/Q_MarkAutomaton.cpp">
@@ -181,6 +205,12 @@
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/Right_ParenAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Rule.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Rule.h">
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/RulesAutomaton.cpp">
