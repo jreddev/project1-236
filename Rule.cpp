@@ -9,7 +9,7 @@ void Rule::toString() {
     std::cout << " :- ";
     int size = bodyPredicates.size();
     for (int i = 0; i < size; i++){
-        bodyPredicates[0]->toString();
+        bodyPredicates[i]->toString();
         if(i<(size-1)){
             std::cout << ",";
         }

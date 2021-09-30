@@ -76,6 +76,7 @@ void Parser::scheme() {
     terminalCheck(TokenType::ID);
     idList(tempPred);
         myDatalog->schemes.push_back(tempPred);
+
     terminalCheck(TokenType::RIGHT_PAREN);
 
 }
