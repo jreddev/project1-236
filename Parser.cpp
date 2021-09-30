@@ -301,7 +301,10 @@ void Parser::terminalCheck(TokenType type) {
 void Parser::commentCheck(){
     TokenType matchType = myTokens[0]->returnType();
     if (matchType == TokenType::BLOCKCOMMENT || matchType == TokenType::LINECOMMENT) {
-        myTokens.erase(myTokens.begin());
+        while (matchType == TokenType::BLOCKCOMMENT || matchType == TokenType::LINECOMMENT) {
+            myTokens.erase(myTokens.begin());
+            matchType = myTokens[0]->returnType();
+        }
     }
 }
 

@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/jared/CS236/project1/DatalogProgram.cpp
-DatalogProgram.h
-C:/Users/jared/CS236/project1/DatalogProgram.h
-set
--
-
 C:/Users/jared/CS236/project1/DatalogProgram.h
 string
 -
@@ -34,6 +28,20 @@ C:/Users/jared/CS236/project1/fstream
 iostream
 C:/Users/jared/CS236/project1/iostream
 
+C:/Users/jared/CS236/project1/Parser.cpp
+Parser.h
+C:/Users/jared/CS236/project1/Parser.h
+set
+-
+
+C:/Users/jared/CS236/project1/Parser.h
+Token.h
+C:/Users/jared/CS236/project1/Token.h
+DatalogProgram.h
+C:/Users/jared/CS236/project1/DatalogProgram.h
+vector
+-
+
 C:/Users/jared/CS236/project1/Predicate.h
 Parameter.h
 C:/Users/jared/CS236/project1/Parameter.h
@@ -49,4 +57,12 @@ C:/Users/jared/CS236/project1/iostream
 C:/Users/jared/CS236/project1/Rule.h
 Predicate.h
 C:/Users/jared/CS236/project1/Predicate.h
+
+C:/Users/jared/CS236/project1/Token.h
+string
+-
+fstream
+C:/Users/jared/CS236/project1/fstream
+iostream
+C:/Users/jared/CS236/project1/iostream
 
