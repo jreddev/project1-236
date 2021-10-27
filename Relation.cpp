@@ -5,7 +5,7 @@
 #include "Relation.h"
 #include <iostream>
 
-Relation::Relation(std::string name, Header header){
+Relation::Relation(std::string name, Header* header){
     this->name = name;
     this->header = header;
 }
@@ -24,18 +24,18 @@ Relation Relation::select(int index, std::string value){
 Relation Relation::select(int index, int indexTwo){
 
 }
-Relation Relation::project(vector<std::string> indices){
+Relation Relation::project(std::vector<std::string> indices){
 
 }
-Relation Relation::rename(vector<std::string> attributes){
+Relation Relation::rename(std::vector<std::string> attributes){
 
 }
 void Relation::toString(){
-    int headerSize = header.returnSize();
+    int headerSize = header->returnSize();
     for (Tuple t : tuples) {
         for(int i = 0; i < headerSize-1; i++) {
-            cout << header.attributes[i] << "='" << t.values[i] << "', "
+            std::cout << header->attributes[i] << "='" << t.values[i] << "', ";
         }
-        cout << header.attributes[headerSize-1] << "='" << t.values[headerSize-1] << "'"<< endl;
+        std::cout << header->attributes[headerSize-1] << "='" << t.values[headerSize-1] << "'"<< std::endl;
     }
 }

@@ -8,6 +8,7 @@
 #include <string>
 
 class Tuple {
+public:
     std::vector<std::string> values;
 
     bool operator< (const Tuple &rhs) const {

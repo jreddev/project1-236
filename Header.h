@@ -8,8 +8,8 @@
 #include <string>
 
 class Header {
+public:
     std::vector<std::string> attributes;
-
     int returnSize();
 
 };

@@ -9,16 +9,17 @@
 #include <set>
 
 class Relation {
-    Relation(std::string name, Header header);
+public:
+    Relation(std::string name, Header* header);
     ~Relation();
     std::string name;
-    Header header;
-    set<Tuple> tuples;
+    Header* header;
+    std::set<Tuple> tuples;
     void addTuple(Tuple tuple);
     Relation select(int index, std::string value);
     Relation select(int index, int indexTwo);
-    Relation project(vector<std::string> indices);
-    Relation rename(vector<std::string> attributes);
+    Relation project(std::vector<std::string> indices);
+    Relation rename(std::vector<std::string> attributes);
     void toString();
 
 

@@ -8,6 +8,7 @@
 #include <Relation.h>
 
 class Database {
+public:
     std::map<std::string, Relation> mapOfRelations;
     void addToMap(std::string name, Relation relation);
 };
