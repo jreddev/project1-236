@@ -17,14 +17,20 @@ add_executable(project1
         ColonDashAutomaton.h
         CommaAutomaton.cpp
         CommaAutomaton.h
+        Database.cpp
+        Database.h
         DatalogProgram.cpp
         DatalogProgram.h
         EOFAutomaton.cpp
         EOFAutomaton.h
         FactsAutomaton.cpp
         FactsAutomaton.h
+        Header.cpp
+        Header.h
         IdAutomaton.cpp
         IdAutomaton.h
+        Interpreter.cpp
+        Interpreter.h
         Left_ParenAutomaton.cpp
         Left_ParenAutomaton.h
         Lexer.cpp
@@ -46,6 +52,8 @@ add_executable(project1
         Q_MarkAutomaton.h
         QueriesAutomaton.cpp
         QueriesAutomaton.h
+        Relation.cpp
+        Relation.h
         Right_ParenAutomaton.cpp
         Right_ParenAutomaton.h
         Rule.cpp
@@ -58,5 +66,7 @@ add_executable(project1
         StringAutomaton.h
         Token.cpp
         Token.h
+        Tuple.cpp
+        Tuple.h
         UndefinedAutomaton.cpp
         UndefinedAutomaton.h)

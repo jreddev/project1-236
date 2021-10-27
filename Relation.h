@@ -14,7 +14,7 @@ class Relation {
     std::string name;
     Header header;
     set<Tuple> tuples;
-    addTuple(Tuple tuple);
+    void addTuple(Tuple tuple);
     Relation select(int index, std::string value);
     Relation select(int index, int indexTwo);
     Relation project(vector<std::string> indices);

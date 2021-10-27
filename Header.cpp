@@ -3,3 +3,8 @@
 //
 
 #include "Header.h"
+
+int Header::returnSize(){
+    int size = attributes.size();
+    return size;
+}

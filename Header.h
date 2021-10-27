@@ -10,6 +10,8 @@
 class Header {
     std::vector<std::string> attributes;
 
+    int returnSize();
+
 };
 
 

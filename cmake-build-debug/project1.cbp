@@ -117,6 +117,12 @@
 		<Unit filename="C:/Users/jared/CS236/project1/CommaAutomaton.h">
 			<Option target="project1"/>
 		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Database.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Database.h">
+			<Option target="project1"/>
+		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/DatalogProgram.cpp">
 			<Option target="project1"/>
 		</Unit>
@@ -135,10 +141,22 @@
 		<Unit filename="C:/Users/jared/CS236/project1/FactsAutomaton.h">
 			<Option target="project1"/>
 		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Header.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Header.h">
+			<Option target="project1"/>
+		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/IdAutomaton.cpp">
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/IdAutomaton.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Interpreter.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Interpreter.h">
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/Left_ParenAutomaton.cpp">
@@ -201,6 +219,12 @@
 		<Unit filename="C:/Users/jared/CS236/project1/QueriesAutomaton.h">
 			<Option target="project1"/>
 		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Relation.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Relation.h">
+			<Option target="project1"/>
+		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/Right_ParenAutomaton.cpp">
 			<Option target="project1"/>
 		</Unit>
@@ -235,6 +259,12 @@
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/Token.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Tuple.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="C:/Users/jared/CS236/project1/Tuple.h">
 			<Option target="project1"/>
 		</Unit>
 		<Unit filename="C:/Users/jared/CS236/project1/UndefinedAutomaton.cpp">

@@ -156,9 +156,28 @@ CMakeFiles\project1.dir\CommaAutomaton.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\CommaAutomaton.cpp.s /c C:\Users\jared\CS236\project1\CommaAutomaton.cpp
 <<
 
+CMakeFiles\project1.dir\Database.cpp.obj: CMakeFiles\project1.dir\flags.make
+CMakeFiles\project1.dir\Database.cpp.obj: ..\Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/project1.dir/Database.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Database.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Database.cpp
+<<
+
+CMakeFiles\project1.dir\Database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project1.dir/Database.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\project1.dir\Database.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jared\CS236\project1\Database.cpp
+<<
+
+CMakeFiles\project1.dir\Database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project1.dir/Database.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\Database.cpp.s /c C:\Users\jared\CS236\project1\Database.cpp
+<<
+
 CMakeFiles\project1.dir\DatalogProgram.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\DatalogProgram.cpp.obj: ..\DatalogProgram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/project1.dir/DatalogProgram.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project1.dir/DatalogProgram.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\DatalogProgram.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\DatalogProgram.cpp
 <<
@@ -177,7 +196,7 @@ CMakeFiles\project1.dir\DatalogProgram.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\EOFAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\EOFAutomaton.cpp.obj: ..\EOFAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project1.dir/EOFAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project1.dir/EOFAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\EOFAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\EOFAutomaton.cpp
 <<
@@ -196,7 +215,7 @@ CMakeFiles\project1.dir\EOFAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\FactsAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\FactsAutomaton.cpp.obj: ..\FactsAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project1.dir/FactsAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project1.dir/FactsAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\FactsAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\FactsAutomaton.cpp
 <<
@@ -213,9 +232,28 @@ CMakeFiles\project1.dir\FactsAutomaton.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\FactsAutomaton.cpp.s /c C:\Users\jared\CS236\project1\FactsAutomaton.cpp
 <<
 
+CMakeFiles\project1.dir\Header.cpp.obj: CMakeFiles\project1.dir\flags.make
+CMakeFiles\project1.dir\Header.cpp.obj: ..\Header.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project1.dir/Header.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Header.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Header.cpp
+<<
+
+CMakeFiles\project1.dir\Header.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project1.dir/Header.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\project1.dir\Header.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jared\CS236\project1\Header.cpp
+<<
+
+CMakeFiles\project1.dir\Header.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project1.dir/Header.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\Header.cpp.s /c C:\Users\jared\CS236\project1\Header.cpp
+<<
+
 CMakeFiles\project1.dir\IdAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\IdAutomaton.cpp.obj: ..\IdAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project1.dir/IdAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project1.dir/IdAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\IdAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\IdAutomaton.cpp
 <<
@@ -232,9 +270,28 @@ CMakeFiles\project1.dir\IdAutomaton.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\IdAutomaton.cpp.s /c C:\Users\jared\CS236\project1\IdAutomaton.cpp
 <<
 
+CMakeFiles\project1.dir\Interpreter.cpp.obj: CMakeFiles\project1.dir\flags.make
+CMakeFiles\project1.dir\Interpreter.cpp.obj: ..\Interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project1.dir/Interpreter.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Interpreter.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Interpreter.cpp
+<<
+
+CMakeFiles\project1.dir\Interpreter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project1.dir/Interpreter.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\project1.dir\Interpreter.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jared\CS236\project1\Interpreter.cpp
+<<
+
+CMakeFiles\project1.dir\Interpreter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project1.dir/Interpreter.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\Interpreter.cpp.s /c C:\Users\jared\CS236\project1\Interpreter.cpp
+<<
+
 CMakeFiles\project1.dir\Left_ParenAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Left_ParenAutomaton.cpp.obj: ..\Left_ParenAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project1.dir/Left_ParenAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project1.dir/Left_ParenAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Left_ParenAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Left_ParenAutomaton.cpp
 <<
@@ -253,7 +310,7 @@ CMakeFiles\project1.dir\Left_ParenAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\Lexer.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Lexer.cpp.obj: ..\Lexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project1.dir/Lexer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project1.dir/Lexer.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Lexer.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Lexer.cpp
 <<
@@ -272,7 +329,7 @@ CMakeFiles\project1.dir\Lexer.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\LineCommentAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\LineCommentAutomaton.cpp.obj: ..\LineCommentAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project1.dir/LineCommentAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project1.dir/LineCommentAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\LineCommentAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\LineCommentAutomaton.cpp
 <<
@@ -291,7 +348,7 @@ CMakeFiles\project1.dir\LineCommentAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\main.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project1.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/project1.dir/main.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\main.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\main.cpp
 <<
@@ -310,7 +367,7 @@ CMakeFiles\project1.dir\main.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\MultiplyAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\MultiplyAutomaton.cpp.obj: ..\MultiplyAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project1.dir/MultiplyAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/project1.dir/MultiplyAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\MultiplyAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\MultiplyAutomaton.cpp
 <<
@@ -329,7 +386,7 @@ CMakeFiles\project1.dir\MultiplyAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\PeriodAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\PeriodAutomaton.cpp.obj: ..\PeriodAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project1.dir/PeriodAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/project1.dir/PeriodAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\PeriodAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\PeriodAutomaton.cpp
 <<
@@ -348,7 +405,7 @@ CMakeFiles\project1.dir\PeriodAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\Parameter.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Parameter.cpp.obj: ..\Parameter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/project1.dir/Parameter.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/project1.dir/Parameter.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Parameter.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Parameter.cpp
 <<
@@ -367,7 +424,7 @@ CMakeFiles\project1.dir\Parameter.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\Parser.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Parser.cpp.obj: ..\Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/project1.dir/Parser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/project1.dir/Parser.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Parser.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Parser.cpp
 <<
@@ -386,7 +443,7 @@ CMakeFiles\project1.dir\Parser.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\Predicate.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Predicate.cpp.obj: ..\Predicate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/project1.dir/Predicate.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/project1.dir/Predicate.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Predicate.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Predicate.cpp
 <<
@@ -405,7 +462,7 @@ CMakeFiles\project1.dir\Predicate.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\Q_MarkAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Q_MarkAutomaton.cpp.obj: ..\Q_MarkAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/project1.dir/Q_MarkAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/project1.dir/Q_MarkAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Q_MarkAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Q_MarkAutomaton.cpp
 <<
@@ -424,7 +481,7 @@ CMakeFiles\project1.dir\Q_MarkAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\QueriesAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\QueriesAutomaton.cpp.obj: ..\QueriesAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/project1.dir/QueriesAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/project1.dir/QueriesAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\QueriesAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\QueriesAutomaton.cpp
 <<
@@ -441,9 +498,28 @@ CMakeFiles\project1.dir\QueriesAutomaton.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\QueriesAutomaton.cpp.s /c C:\Users\jared\CS236\project1\QueriesAutomaton.cpp
 <<
 
+CMakeFiles\project1.dir\Relation.cpp.obj: CMakeFiles\project1.dir\flags.make
+CMakeFiles\project1.dir\Relation.cpp.obj: ..\Relation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/project1.dir/Relation.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Relation.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Relation.cpp
+<<
+
+CMakeFiles\project1.dir\Relation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project1.dir/Relation.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\project1.dir\Relation.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jared\CS236\project1\Relation.cpp
+<<
+
+CMakeFiles\project1.dir\Relation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project1.dir/Relation.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\Relation.cpp.s /c C:\Users\jared\CS236\project1\Relation.cpp
+<<
+
 CMakeFiles\project1.dir\Right_ParenAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Right_ParenAutomaton.cpp.obj: ..\Right_ParenAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/project1.dir/Right_ParenAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/project1.dir/Right_ParenAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Right_ParenAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Right_ParenAutomaton.cpp
 <<
@@ -462,7 +538,7 @@ CMakeFiles\project1.dir\Right_ParenAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\Rule.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Rule.cpp.obj: ..\Rule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/project1.dir/Rule.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/project1.dir/Rule.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Rule.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Rule.cpp
 <<
@@ -481,7 +557,7 @@ CMakeFiles\project1.dir\Rule.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\RulesAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\RulesAutomaton.cpp.obj: ..\RulesAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/project1.dir/RulesAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/project1.dir/RulesAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\RulesAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\RulesAutomaton.cpp
 <<
@@ -500,7 +576,7 @@ CMakeFiles\project1.dir\RulesAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\SchemesAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\SchemesAutomaton.cpp.obj: ..\SchemesAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/project1.dir/SchemesAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/project1.dir/SchemesAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\SchemesAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\SchemesAutomaton.cpp
 <<
@@ -519,7 +595,7 @@ CMakeFiles\project1.dir\SchemesAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\StringAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\StringAutomaton.cpp.obj: ..\StringAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/project1.dir/StringAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/project1.dir/StringAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\StringAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\StringAutomaton.cpp
 <<
@@ -538,7 +614,7 @@ CMakeFiles\project1.dir\StringAutomaton.cpp.s: cmake_force
 
 CMakeFiles\project1.dir\Token.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\Token.cpp.obj: ..\Token.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/project1.dir/Token.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/project1.dir/Token.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Token.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Token.cpp
 <<
@@ -555,9 +631,28 @@ CMakeFiles\project1.dir\Token.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\Token.cpp.s /c C:\Users\jared\CS236\project1\Token.cpp
 <<
 
+CMakeFiles\project1.dir\Tuple.cpp.obj: CMakeFiles\project1.dir\flags.make
+CMakeFiles\project1.dir\Tuple.cpp.obj: ..\Tuple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/project1.dir/Tuple.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\Tuple.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\Tuple.cpp
+<<
+
+CMakeFiles\project1.dir\Tuple.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project1.dir/Tuple.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\project1.dir\Tuple.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jared\CS236\project1\Tuple.cpp
+<<
+
+CMakeFiles\project1.dir\Tuple.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project1.dir/Tuple.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\project1.dir\Tuple.cpp.s /c C:\Users\jared\CS236\project1\Tuple.cpp
+<<
+
 CMakeFiles\project1.dir\UndefinedAutomaton.cpp.obj: CMakeFiles\project1.dir\flags.make
 CMakeFiles\project1.dir\UndefinedAutomaton.cpp.obj: ..\UndefinedAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/project1.dir/UndefinedAutomaton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/project1.dir/UndefinedAutomaton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\project1.dir\UndefinedAutomaton.cpp.obj /FdCMakeFiles\project1.dir\ /FS -c C:\Users\jared\CS236\project1\UndefinedAutomaton.cpp
 <<
@@ -581,10 +676,13 @@ project1_OBJECTS = \
 "CMakeFiles\project1.dir\ColonAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\ColonDashAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\CommaAutomaton.cpp.obj" \
+"CMakeFiles\project1.dir\Database.cpp.obj" \
 "CMakeFiles\project1.dir\DatalogProgram.cpp.obj" \
 "CMakeFiles\project1.dir\EOFAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\FactsAutomaton.cpp.obj" \
+"CMakeFiles\project1.dir\Header.cpp.obj" \
 "CMakeFiles\project1.dir\IdAutomaton.cpp.obj" \
+"CMakeFiles\project1.dir\Interpreter.cpp.obj" \
 "CMakeFiles\project1.dir\Left_ParenAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\Lexer.cpp.obj" \
 "CMakeFiles\project1.dir\LineCommentAutomaton.cpp.obj" \
@@ -596,12 +694,14 @@ project1_OBJECTS = \
 "CMakeFiles\project1.dir\Predicate.cpp.obj" \
 "CMakeFiles\project1.dir\Q_MarkAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\QueriesAutomaton.cpp.obj" \
+"CMakeFiles\project1.dir\Relation.cpp.obj" \
 "CMakeFiles\project1.dir\Right_ParenAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\Rule.cpp.obj" \
 "CMakeFiles\project1.dir\RulesAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\SchemesAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\StringAutomaton.cpp.obj" \
 "CMakeFiles\project1.dir\Token.cpp.obj" \
+"CMakeFiles\project1.dir\Tuple.cpp.obj" \
 "CMakeFiles\project1.dir\UndefinedAutomaton.cpp.obj"
 
 # External object files for target project1
@@ -612,10 +712,13 @@ project1.exe: CMakeFiles\project1.dir\BlockCommentAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\ColonAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\ColonDashAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\CommaAutomaton.cpp.obj
+project1.exe: CMakeFiles\project1.dir\Database.cpp.obj
 project1.exe: CMakeFiles\project1.dir\DatalogProgram.cpp.obj
 project1.exe: CMakeFiles\project1.dir\EOFAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\FactsAutomaton.cpp.obj
+project1.exe: CMakeFiles\project1.dir\Header.cpp.obj
 project1.exe: CMakeFiles\project1.dir\IdAutomaton.cpp.obj
+project1.exe: CMakeFiles\project1.dir\Interpreter.cpp.obj
 project1.exe: CMakeFiles\project1.dir\Left_ParenAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\Lexer.cpp.obj
 project1.exe: CMakeFiles\project1.dir\LineCommentAutomaton.cpp.obj
@@ -627,16 +730,18 @@ project1.exe: CMakeFiles\project1.dir\Parser.cpp.obj
 project1.exe: CMakeFiles\project1.dir\Predicate.cpp.obj
 project1.exe: CMakeFiles\project1.dir\Q_MarkAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\QueriesAutomaton.cpp.obj
+project1.exe: CMakeFiles\project1.dir\Relation.cpp.obj
 project1.exe: CMakeFiles\project1.dir\Right_ParenAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\Rule.cpp.obj
 project1.exe: CMakeFiles\project1.dir\RulesAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\SchemesAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\StringAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\Token.cpp.obj
+project1.exe: CMakeFiles\project1.dir\Tuple.cpp.obj
 project1.exe: CMakeFiles\project1.dir\UndefinedAutomaton.cpp.obj
 project1.exe: CMakeFiles\project1.dir\build.make
 project1.exe: CMakeFiles\project1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable project1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jared\CS236\project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable project1.exe"
 	"C:\Program Files\JetBrains\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\project1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\PROFES~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\project1.dir\objects1.rsp @<<
  /out:project1.exe /implib:project1.lib /pdb:C:\Users\jared\CS236\project1\cmake-build-debug\project1.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

@@ -4,10 +4,12 @@
 
 #ifndef PROJECT1_DATABASE_H
 #define PROJECT1_DATABASE_H
-
+#include <map>
+#include <Relation.h>
 
 class Database {
-
+    std::map<std::string, Relation> mapOfRelations;
+    void addToMap(std::string name, Relation relation);
 };
 
 

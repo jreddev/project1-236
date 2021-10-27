@@ -3,3 +3,7 @@
 //
 
 #include "Database.h"
+
+void Database::addToMap(std::string name, Relation relation) {
+    mapOfRelations.insert(name, relation);
+}

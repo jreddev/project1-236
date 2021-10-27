@@ -3,3 +3,8 @@
 //
 
 #include "Tuple.h"
+
+int Tuple::returnSize(){
+    int size = values.size();
+    return size;
+}
