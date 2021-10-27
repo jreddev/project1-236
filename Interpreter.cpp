@@ -17,9 +17,24 @@ Interpreter::Interpreter(Database database, DatalogProgram datalogProgram) {
         }
         std::string relationName = datalogProgram.schemes[i]->id;
         Relation* newRelation = new Relation(relationName, newHeader);
+        database.addToMap(relationName,newRelation);
+    }
 
-
-        //Relation newRelation = new Relation(datalogProgram.schemes[i]->id);
+    int factsSize = datalogProgram.facts.size();
+    for (int i = 0; i < factsSize; i++) {
+        Tuple* newTuple = new Tuple();
+        int valuesSize = datalogProgram.facts[i]->parameterList.size();
+        for (int k = 0; k < valuesSize; k++){
+            std::string newValue = datalogProgram.facts[i]->parameterList[k]->p;
+            newTuple->values.push_back(newValue);
+        }
+        std::string relationName = datalogProgram.facts[i]->id;
+        Relation* tempRelation = database.mapOfRelations.at(relationName);
+        tempRelation->tuples.insert(newTuple);
 
     }
+}
+
+Relation Interpreter::evaluatePredicate(Predicate p){
+
 }

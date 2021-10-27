@@ -13,6 +13,7 @@ class Interpreter {
     DatalogProgram datalogProgram;
     Database database;
 
+    Relation evaluatePredicate(Predicate p);
 };
 
 

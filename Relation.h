@@ -14,12 +14,12 @@ public:
     ~Relation();
     std::string name;
     Header* header;
-    std::set<Tuple> tuples;
-    void addTuple(Tuple tuple);
-    Relation select(int index, std::string value);
-    Relation select(int index, int indexTwo);
-    Relation project(std::vector<std::string> indices);
-    Relation rename(std::vector<std::string> attributes);
+    std::set<Tuple*> tuples;
+    void addTuple(Tuple* tuple);
+    Relation* select(int index, std::string value);
+    Relation* select(int index, int indexTwo);
+    Relation* project(std::vector<std::string> indices);
+    Relation* rename(std::vector<std::string> attributes);
     void toString();
 
 

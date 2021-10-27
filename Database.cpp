@@ -4,6 +4,6 @@
 
 #include "Database.h"
 
-void Database::addToMap(std::string name, Relation relation) {
+void Database::addToMap(std::string name, Relation* relation) {
     mapOfRelations.insert({name, relation});
 }

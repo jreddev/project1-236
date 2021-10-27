@@ -12,6 +12,7 @@
 class Parameter {
 private:
 public:
+    bool isConstant;
     std::string p;
     void toString();
 };

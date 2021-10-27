@@ -14,28 +14,34 @@ Relation::~Relation(){
     std::cout << "destroy_me";
 }
 
-void Relation::addTuple(Tuple tuple) {
+void Relation::addTuple(Tuple* tuple) {
     tuples.insert(tuple);
 }
 
-Relation Relation::select(int index, std::string value){
+Relation* Relation::select(int index, std::string value){
+    Relation* selectedRelation = new Relation(name, header);
+    for (Tuple* t : tuples) {
+        std::string tVal = t->values[index];
+        if(tVal == value){
+
+        }
+    }
+}
+Relation* Relation::select(int index, int indexTwo){
 
 }
-Relation Relation::select(int index, int indexTwo){
+Relation* Relation::project(std::vector<std::string> indices){
 
 }
-Relation Relation::project(std::vector<std::string> indices){
-
-}
-Relation Relation::rename(std::vector<std::string> attributes){
+Relation* Relation::rename(std::vector<std::string> attributes){
 
 }
 void Relation::toString(){
     int headerSize = header->returnSize();
-    for (Tuple t : tuples) {
+    for (Tuple* t : tuples) {
         for(int i = 0; i < headerSize-1; i++) {
-            std::cout << header->attributes[i] << "='" << t.values[i] << "', ";
+            std::cout << header->attributes[i] << "='" << t->values[i] << "', ";
         }
-        std::cout << header->attributes[headerSize-1] << "='" << t.values[headerSize-1] << "'"<< std::endl;
+        std::cout << header->attributes[headerSize-1] << "='" << t->values[headerSize-1] << "'"<< std::endl;
     }
 }
