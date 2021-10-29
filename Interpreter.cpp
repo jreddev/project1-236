@@ -62,6 +62,7 @@ void Interpreter::evaluateQueries() {
         }
         std::cout << std::endl;
         newRelation->toString();
+        std::cout << std::endl;
     }
 
 }
