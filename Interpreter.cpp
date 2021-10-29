@@ -60,6 +60,9 @@ void Interpreter::evaluateQueries() {
         if (sayYes) {
             std::cout << " Yes(" << tupleSize << ")";
         }
+        else {
+            std::cout << " No";
+        }
         std::cout << std::endl;
         newRelation->toString();
     }
