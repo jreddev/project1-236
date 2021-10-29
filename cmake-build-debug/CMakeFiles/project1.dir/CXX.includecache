@@ -6,17 +6,63 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/jared/CS236/project1/Database.h
+map
+-
+Relation.h
+C:/Users/jared/CS236/project1/Relation.h
+
+C:/Users/jared/CS236/project1/DatalogProgram.h
+string
+-
+vector
+-
+fstream
+C:/Users/jared/CS236/project1/fstream
+iostream
+C:/Users/jared/CS236/project1/iostream
+Rule.h
+C:/Users/jared/CS236/project1/Rule.h
+
 C:/Users/jared/CS236/project1/Header.h
 vector
 C:/Users/jared/CS236/project1/vector
 string
 -
 
-C:/Users/jared/CS236/project1/Relation.cpp
+C:/Users/jared/CS236/project1/Interpreter.cpp
+Interpreter.h
+C:/Users/jared/CS236/project1/Interpreter.h
+
+C:/Users/jared/CS236/project1/Interpreter.h
+DatalogProgram.h
+C:/Users/jared/CS236/project1/DatalogProgram.h
+Database.h
+C:/Users/jared/CS236/project1/Database.h
 Relation.h
 C:/Users/jared/CS236/project1/Relation.h
-iostream
+
+C:/Users/jared/CS236/project1/Parameter.h
+string
 -
+vector
+-
+fstream
+C:/Users/jared/CS236/project1/fstream
+iostream
+C:/Users/jared/CS236/project1/iostream
+
+C:/Users/jared/CS236/project1/Predicate.h
+Parameter.h
+C:/Users/jared/CS236/project1/Parameter.h
+string
+-
+vector
+-
+fstream
+C:/Users/jared/CS236/project1/fstream
+iostream
+C:/Users/jared/CS236/project1/iostream
 
 C:/Users/jared/CS236/project1/Relation.h
 Tuple.h
@@ -25,6 +71,10 @@ Header.h
 C:/Users/jared/CS236/project1/Header.h
 set
 -
+
+C:/Users/jared/CS236/project1/Rule.h
+Predicate.h
+C:/Users/jared/CS236/project1/Predicate.h
 
 C:/Users/jared/CS236/project1/Tuple.h
 vector

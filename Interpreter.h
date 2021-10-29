@@ -6,6 +6,7 @@
 #define PROJECT1_INTERPRETER_H
 #include "DatalogProgram.h"
 #include "Database.h"
+#include "Relation.h"
 
 class Interpreter {
 public:

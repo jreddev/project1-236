@@ -62,7 +62,6 @@ void Interpreter::evaluateQueries() {
         }
         std::cout << std::endl;
         newRelation->toString();
-        std::cout << std::endl;
     }
 
 }
@@ -78,7 +77,8 @@ Relation* Interpreter::evaluatePredicate(Predicate* p) {
 
         if(p->parameterList[i]->isConstant) {
             //type 1 select.
-            queryRelation = queryRelation->select(i,p->id);
+            std::string passVal = p->parameterList[i]->p;
+            queryRelation = queryRelation->select(i,passVal);
             //return queryRelation;
         }
         else {

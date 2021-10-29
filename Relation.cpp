@@ -123,13 +123,20 @@ void Relation::toString(){
     int tupleSize = tuples.size();
     int headerSize = header->attributes.size();
     if (!tuples.empty()){
-        for (const Tuple &t : tuples) {
-            for(int i = 0; i < tupleSize-1; i++) {
-                std::cout << header->attributes[i];
-                std::cout << "=" << t.values[i] << ", ";
+        for (Tuple t : tuples) {
+            int whileNum = 0;
+            while (whileNum < headerSize) {
+                std::cout << "  " << header->attributes[whileNum] << "=" << t.values[whileNum];
+                if (whileNum < (headerSize - 1)) {
+                    std::cout << ", ";
+                }
+                if (whileNum == headerSize - 1) {
+                    std::cout << std::endl;
+                }
+
+
+                whileNum++;
             }
-            std::cout << header->attributes[headerSize-1];
-            std::cout << "='" << t.values[tupleSize-1] << "'"<< std::endl;
         }
     }
 }
