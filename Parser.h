@@ -8,11 +8,12 @@ class Parser
 {
 private:
     std::vector<Token*> myTokens;
-    DatalogProgram* myDatalog = new DatalogProgram;
-public:
-    Parser(std::vector<Token*> inputTokens);
-    ~Parser();
 
+public:
+    //DatalogProgram* myDatalog = new DatalogProgram;
+    Parser(std::vector<Token*> inputTokens, DatalogProgram inputDatalog);
+    ~Parser();
+    DatalogProgram myDatalog;
     void datalogProgram();
     void toString();
     void scheme();

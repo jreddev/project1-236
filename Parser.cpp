@@ -4,8 +4,9 @@
 
 #include "Parser.h"
 #include <set>
-Parser::Parser(std::vector<Token*> inputTokens) {
+Parser::Parser(std::vector<Token*> inputTokens, DatalogProgram inputDatalog) {
     myTokens = inputTokens;
+    myDatalog = inputDatalog;
     std::vector<Token*> matchTokens;
 
 }
@@ -20,12 +21,12 @@ void Parser::Run() {
         datalogProgram();
 
     } catch (Token* error) {
-        std::cout << "Failure!\n\t";
+        //std::cout << "Failure!\n\t";
         error->toString();
     }
     if (myTokens.empty()) {
-        std::cout << "Success!\n";
-        toString();
+        //std::cout << "Success!\n";
+        //toString(); //USE THIS FOR WHEN YOU NEED THE TO STRING FOR THE PARSER.
         /*std::set<std::string> domain;
         int domainSize = domain.size();
         std::cout << "Domain(" << domainSize << "):\n";
@@ -61,7 +62,7 @@ void Parser::datalogProgram() {
 }
 
 void Parser::toString() {
-    myDatalog->toString();
+    myDatalog.toString();
 }
 
 void Parser::scheme() {
@@ -75,7 +76,7 @@ void Parser::scheme() {
         tempPred->parameterList.push_back(tempParam);
     terminalCheck(TokenType::ID);
     idList(tempPred);
-        myDatalog->schemes.push_back(tempPred);
+        myDatalog.schemes.push_back(tempPred);
 
     terminalCheck(TokenType::RIGHT_PAREN);
 
@@ -103,7 +104,7 @@ void Parser::fact(){
     stringList(tempPred);
     terminalCheck(TokenType::RIGHT_PAREN);
     terminalCheck(TokenType::PERIOD);
-    myDatalog->facts.push_back(tempPred);
+    myDatalog.facts.push_back(tempPred);
 }
 
 void Parser::factList(){
@@ -125,7 +126,7 @@ void Parser::rule(){
     rulePredicate(tempRule);
     rulePredicateList(tempRule);
     terminalCheck(TokenType::PERIOD);
-    myDatalog->rules.push_back(tempRule);
+    myDatalog.rules.push_back(tempRule);
 }
 
 void Parser::ruleList(){
@@ -214,7 +215,7 @@ void Parser::predicate(){
     parameter(tempPred);
     parameterList(tempPred);
     terminalCheck(TokenType::RIGHT_PAREN);
-    myDatalog->queries.push_back(tempPred);
+    myDatalog.queries.push_back(tempPred);
 }
 
 void Parser::predicateList(){
@@ -260,12 +261,14 @@ void Parser::parameter(Predicate* tempPred){
     if (matchType == TokenType::STRING) {
             Parameter* tempParam = new Parameter();
             tempParam->p = myTokens[0]->value;
+            tempParam->isConstant = true;
             tempPred->parameterList.push_back(tempParam);
         terminalCheck(TokenType::STRING);
     }
     else if (matchType == TokenType::ID){
             Parameter* tempParam = new Parameter();
             tempParam->p = myTokens[0]->value;
+            tempParam->isConstant = false;
             tempPred->parameterList.push_back(tempParam);
         terminalCheck(TokenType::ID);
     }

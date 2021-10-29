@@ -8,12 +8,29 @@
 #include "Database.h"
 
 class Interpreter {
-    Interpreter(Database database, DatalogProgram datalogProgram);
+public:
+    Interpreter(Database database, DatalogProgram inputDatalog);
     ~Interpreter();
-    DatalogProgram datalogProgram;
+    DatalogProgram myDatalog;
     Database database;
 
-    Relation evaluatePredicate(Predicate p);
+
+
+    Relation* evaluatePredicate(Predicate* p);
+
+    void evaluateQueries();
+
+    void initializeFacts();
+
+    void initializeSchemes();
+
+    Relation* findRelation(std::string id);
+
+    bool findInMap(std::string value);
+
+    bool findInVector(std::string id);
+
+    bool findInVector(std::vector<std::string> searchVector, std::string id);
 };
 
 

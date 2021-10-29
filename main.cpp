@@ -1,5 +1,6 @@
 #include "Lexer.h"
 #include "Parser.h"
+#include "Interpreter.h"
 #include <vector>
 
 
@@ -30,8 +31,14 @@ int main(int argc, char** argv) {
     std::vector<Token*> tokens = lexer->tokens;
     //END MY ADDED CODE//
 
-    Parser* parser = new Parser(tokens);
+    DatalogProgram myDatalog = DatalogProgram();
+    Parser* parser = new Parser(tokens, myDatalog);
     parser->Run();
+
+
+    Database database = Database();
+    Interpreter* interpreter = new Interpreter(database, parser->myDatalog);
+    interpreter->evaluateQueries();
 
     delete lexer;
 

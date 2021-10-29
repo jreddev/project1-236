@@ -6,33 +6,29 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/jared/CS236/project1/Parameter.h
+C:/Users/jared/CS236/project1/Header.h
+vector
+C:/Users/jared/CS236/project1/vector
 string
 -
-vector
--
-fstream
-C:/Users/jared/CS236/project1/fstream
-iostream
-C:/Users/jared/CS236/project1/iostream
 
-C:/Users/jared/CS236/project1/Predicate.h
-Parameter.h
-C:/Users/jared/CS236/project1/Parameter.h
+C:/Users/jared/CS236/project1/Relation.cpp
+Relation.h
+C:/Users/jared/CS236/project1/Relation.h
+iostream
+-
+
+C:/Users/jared/CS236/project1/Relation.h
+Tuple.h
+C:/Users/jared/CS236/project1/Tuple.h
+Header.h
+C:/Users/jared/CS236/project1/Header.h
+set
+-
+
+C:/Users/jared/CS236/project1/Tuple.h
+vector
+C:/Users/jared/CS236/project1/vector
 string
 -
-vector
--
-fstream
-C:/Users/jared/CS236/project1/fstream
-iostream
-C:/Users/jared/CS236/project1/iostream
-
-C:/Users/jared/CS236/project1/Rule.cpp
-Rule.h
-C:/Users/jared/CS236/project1/Rule.h
-
-C:/Users/jared/CS236/project1/Rule.h
-Predicate.h
-C:/Users/jared/CS236/project1/Predicate.h
 
