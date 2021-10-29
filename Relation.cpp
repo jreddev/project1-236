@@ -120,7 +120,7 @@ Relation* Relation::rename(std::vector<std::string> attributes){
 }*/
 
 void Relation::toString(){
-    int tupleSize = tuples.size();
+    //int tupleSize = tuples.size();
     int headerSize = header->attributes.size();
     if (!tuples.empty()){
         for (Tuple t : tuples) {
