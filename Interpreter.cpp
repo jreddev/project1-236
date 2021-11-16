@@ -132,3 +132,23 @@ Relation* Interpreter::findRelation(std::string id){
     Relation* returnRelation = database.mapOfRelations[id];
     return returnRelation;
 }
+
+void Interpreter::evaluateRules() {
+    std::vector<Relation*> rulesToEval;
+    int rulesSize = myDatalog.rules.size();
+    for(int i = 0; i < rulesSize; i++) {
+        int predicateSize = myDatalog.rules[i]->bodyPredicates.size();
+        for (int j = 0; j < predicateSize; ++j) {
+            Predicate* p = myDatalog.rules[i]->bodyPredicates[j];
+            Relation* newRelation = evaluatePredicate(p);
+            rulesToEval.push_back(newRelation);
+            //newRelation->toString(); //not sure about this.
+        }
+        int rulesRelations = rulesToEval.size();
+        if (rulesRelations > 1) {
+            for (int j = 0; j < rulesRelations; ++j) {
+                Relation* ruleRelation = rulesToEval[j]->Join2(rulesToEval[j+1],rulesToEval[j]->name);
+            }
+        }
+    }
+}

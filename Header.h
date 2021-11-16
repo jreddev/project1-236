@@ -12,6 +12,7 @@ public:
     std::vector<std::string> attributes;
     int returnSize();
 
+    int find(std::string findMe);
 };
 
 

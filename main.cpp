@@ -38,6 +38,7 @@ int main(int argc, char** argv) {
 
     Database database = Database();
     Interpreter* interpreter = new Interpreter(database, parser->myDatalog);
+    interpreter->evaluateRules();
     interpreter->evaluateQueries();
 
     delete lexer;

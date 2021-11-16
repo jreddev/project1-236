@@ -32,6 +32,8 @@ public:
     bool findInVector(std::string id);
 
     bool findInVector(std::vector<std::string> searchVector, std::string id);
+
+    void evaluateRules();
 };
 
 

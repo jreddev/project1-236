@@ -23,6 +23,17 @@ public:
     void toString();
 
 
+    //Relation *Join(Relation *joinMe);
+
+    Relation *Join(Relation *joinMe, std::string ruleName);
+
+    void removeDuplicates(std::vector<std::string> &v);
+
+    Relation *Join2(Relation *joinMe, std::string ruleName);
+
+    Header *combineHeaders(Header *header1, Header *header2, std::vector<std::pair<int, int>> commonVals);
+
+    Tuple *combineTuples(Tuple tuple, Tuple tuple1);
 };
 
 
