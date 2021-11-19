@@ -230,43 +230,90 @@ void Relation::removeDuplicates(std::vector<std::string> &v)
 
 Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
     std::vector<std::pair<int,int>> commonVals;
-    Header* newHeader = combineHeaders(this->header,joinMe->header,commonVals);
+    Header* newHeader = new Header;
+    Header* header2 = joinMe->header;
+    int header2Size = header2->returnSize();
+    for (int i = 0; i < header2Size; i++) {
+        std::string attribute2 = header2->attributes[i];//Just so I remember, I changed this from header-attributes[i] to just attributes[i].
+        int indexVal = header->find(attribute2);
+        if(indexVal != -1) {
+            std::cout << attribute2 << " is a common element." << std::endl;
+            std::pair<int,int> tempPair = std::make_pair(indexVal,i);
+            commonVals.push_back(tempPair);
+            newHeader->attributes.push_back(attribute2); //not sure about this line
+        }
+        else {
+            newHeader->attributes.push_back(attribute2);
+        }
+    }
+    int header1Size = this->header->returnSize();
+    for (int i = 0; i < header1Size; i++) {
+        std::string attribute1 = header->attributes[i];
+        int indexVal = header2->find(attribute1);
+        if(indexVal != -1) {
+            std::cout << attribute1 << " is a common element." << std::endl;
+        }
+        else {
+            newHeader->attributes.push_back(attribute1);
+        }
+    }
     Relation* newRelation = new Relation(ruleName,newHeader);
     bool joinAble = false;
     int numCommonVals = commonVals.size();
-    int i = 0;
-    for (Tuple t1 : tuples) {
-        int j = 0;
-        for (int k = 0; k < numCommonVals; ++k) {
-            if (i == commonVals[i].first){
-                joinAble = true;
-            }
-        }
-        for (Tuple t2 : joinMe->tuples) {
-            if (j == commonVals[i].second && joinAble){
+    //--
+    if (numCommonVals > 0) {
+       for (Tuple t1 : tuples) {
+           for (Tuple t2 : joinMe->tuples) {
+               for (int i = 0; i < numCommonVals; ++i) {
+                   if (t1.values[commonVals[i].first] == t2.values[commonVals[i].second]) {
+                       Tuple* newTuple = combineTuples(t1,t2);
+                       newRelation->addTuple(*newTuple);
+                   }
+               }
+           }
+       }
+    }
+    //--
+    else {
+        //std::cout << "no common vals, do cross multiply" << std::endl;
+        for (Tuple t1 : tuples) {
+            for (Tuple t2 : joinMe->tuples) {
                 Tuple* newTuple = combineTuples(t1,t2);
                 newRelation->addTuple(*newTuple);
             }
-            j++;
         }
-        i++;
     }
+
     return newRelation;
 }
 
-Header* Relation::combineHeaders(Header* header1, Header* header2, std::vector<std::pair<int,int>> commonVals) {
+Header* Relation::combineHeaders(Header* header1, Header* header2, std::vector<std::pair<int,int>> *commonVals) {
     Header* newHeader = new Header;
     int header2Size = header2->returnSize();
     for (int i = 0; i < header2Size; i++) {
-        std::string attribute = header2->attributes[i];//Just so I remember, I changed this from header-attributes[i] to just attributes[i].
-        int indexVal = header1->find(attribute);
+        std::string attribute2 = header2->attributes[i];//Just so I remember, I changed this from header-attributes[i] to just attributes[i].
+        int indexVal = header1->find(attribute2);
         if(indexVal != -1) {
-            std::cout << attribute << "is a common element." << std::endl;
+            std::cout << attribute2 << " is a common element." << std::endl;
             std::pair<int,int> tempPair = std::make_pair(indexVal,i);
-            commonVals.push_back(tempPair);
+            commonVals->push_back(tempPair);
+            newHeader->attributes.push_back(attribute2); //not sure about this line
         }
         else {
-            newHeader->attributes.push_back(attribute);
+            newHeader->attributes.push_back(attribute2);
+        }
+    }
+    int header1Size = this->header->returnSize();
+    for (int i = 0; i < header1Size; i++) {
+        std::string attribute1 = header1->attributes[i];
+        int indexVal = header2->find(attribute1);
+        if(indexVal != -1) {
+            std::cout << attribute1 << " is a common element." << std::endl;
+            std::pair<int,int> tempPair = std::make_pair(indexVal,i);
+            commonVals->push_back(tempPair);
+        }
+        else {
+            newHeader->attributes.push_back(attribute1);
         }
     }
     return newHeader;
@@ -280,3 +327,36 @@ Tuple *Relation::combineTuples(Tuple t1, Tuple t2) {
     removeDuplicates(newTuple->values);
     return newTuple;
 }
+
+
+
+
+/* if (numCommonVals > 0) {
+        int i = 0;
+        for (Tuple t1 : tuples) {
+            int j = 0;
+            for (int k = 0; k < numCommonVals; ++k) {
+                if (numCommonVals > i && i == commonVals[i].first){
+                    joinAble = true;
+                }
+            }
+            for (Tuple t2 : joinMe->tuples) {
+                if (j == commonVals[j].second && joinAble){ //FIXME :: don't access commonvals[i] if it is empty.
+                    Tuple* newTuple = combineTuples(t1,t2);
+                    newRelation->addTuple(*newTuple);
+                }
+
+if (joinAble && t1.values[commonVals[i].first] == t2.values[commonVals[i].second]) {
+Tuple* newTuple = combineTuples(t1,t2);
+newRelation->addTuple(*newTuple);
+}
+if (joinAble && t1.values[commonVals[i].second] == t2.values[commonVals[i].first]) {
+Tuple* newTuple = combineTuples(t1,t2);
+newRelation->addTuple(*newTuple);
+}
+j++;
+}
+i++;
+joinAble = false;
+}
+}*/

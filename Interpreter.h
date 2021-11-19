@@ -34,6 +34,9 @@ public:
     bool findInVector(std::vector<std::string> searchVector, std::string id);
 
     void evaluateRules();
+
+
+    std::vector<int> convertToIndeces(std::vector<Parameter *> vector, Relation *ruleRelation);
 };
 
 

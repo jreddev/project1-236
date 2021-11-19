@@ -134,6 +134,7 @@ Relation* Interpreter::findRelation(std::string id){
 }
 
 void Interpreter::evaluateRules() {
+    std::cout << "Rule Evaluation" << std::endl;
     std::vector<Relation*> rulesToEval;
     int rulesSize = myDatalog.rules.size();
     for(int i = 0; i < rulesSize; i++) {
@@ -144,11 +145,33 @@ void Interpreter::evaluateRules() {
             rulesToEval.push_back(newRelation);
             //newRelation->toString(); //not sure about this.
         }
+        Relation* ruleRelation;
         int rulesRelations = rulesToEval.size();
         if (rulesRelations > 1) {
-            for (int j = 0; j < rulesRelations; ++j) {
-                Relation* ruleRelation = rulesToEval[j]->Join2(rulesToEval[j+1],rulesToEval[j]->name);
+            for (int j = 0; j < rulesRelations - 1; ++j) {
+                ruleRelation = rulesToEval[j]->Join2(rulesToEval[j+1],rulesToEval[j]->name);
+            }
+        }
+        //TODO :: project tuples that appear in the head predicate
+        std::vector<int> headIndeces = convertToIndeces(myDatalog.rules[i]->headPredicate->parameterList, ruleRelation);
+        ruleRelation = ruleRelation->project(headIndeces);
+        std::cout << "got here dude";
+        //TODO :: rename the relation to make it union compatible
+
+        //TODO :: union with the relation in the database
+    }
+}
+
+std::vector<int> Interpreter::convertToIndeces(std::vector<Parameter *> vector, Relation* ruleRelation) {
+    std::vector<int> headIndeces;
+    int vecSize = vector.size();
+    int relSize = ruleRelation->header->returnSize();
+    for (int j = 0; j < relSize; ++j) {
+        for (int i = 0; i < vecSize; ++i) {
+            if (ruleRelation->header->attributes[j] == vector[i]->p) {
+                headIndeces.push_back(j);
             }
         }
     }
+    return headIndeces;
 }

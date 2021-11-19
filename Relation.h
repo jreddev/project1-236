@@ -34,6 +34,8 @@ public:
     Header *combineHeaders(Header *header1, Header *header2, std::vector<std::pair<int, int>> commonVals);
 
     Tuple *combineTuples(Tuple tuple, Tuple tuple1);
+
+    Header *combineHeaders(Header *header1, Header *header2, std::vector<std::pair<int, int>> *commonVals);
 };
 
 
