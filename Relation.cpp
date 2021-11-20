@@ -67,13 +67,15 @@ Relation* Relation::project(std::vector<int> indices){
 
     Relation* projectRelation = new Relation(name,newHeader);
 
+    int newHeaderSize = newHeader->attributes.size();
+
     for (const Tuple &t : tuples) {
         Tuple newTuple = Tuple();
         for (int i = 0; i < headerSize; i++) {
             std::string attribute = header->attributes[i];
             for (int j = 0; j < vectorSize; j++) {
                 int index = indices[j];
-                if (index == i) {
+                if (index == i && i < t.values.size()) {
                     std::string tupleVal = t.values.at(i); //might be j instead of i.. just watch out.
                     newTuple.values.push_back(tupleVal);
                 }
@@ -294,7 +296,7 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
            for (Tuple t2 : joinMe->tuples) {
                for (int i = 0; i < numCommonVals; ++i) {
                    if (t1.values[commonVals[i].first] == t2.values[commonVals[i].second]) {
-                       Tuple* newTuple = combineTuples(t1,t2);
+                       Tuple* newTuple = combineTuples(t1,t2,newHeader->returnSize());
                        newRelation->addTuple(*newTuple);
                    }
                }
@@ -306,7 +308,7 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
         //std::cout << "no common vals, do cross multiply" << std::endl;
         for (Tuple t1 : tuples) {
             for (Tuple t2 : joinMe->tuples) {
-                Tuple* newTuple = combineTuples(t1,t2);
+                Tuple* newTuple = combineTuples(t1,t2,newHeader->returnSize());
                 newRelation->addTuple(*newTuple);
             }
         }
@@ -347,12 +349,15 @@ Header* Relation::combineHeaders(Header* header1, Header* header2, std::vector<s
     return newHeader;
 }
 
-Tuple *Relation::combineTuples(Tuple t1, Tuple t2) {
+Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize) {
     Tuple* newTuple = new Tuple;
+    int newTuplesSize = t1.values.size() + t2.values.size();
     newTuple->values.reserve(t1.values.size() + t2.values.size());
     newTuple->values.insert(newTuple->values.end(),t1.values.begin(),t1.values.end());
     newTuple->values.insert(newTuple->values.end(),t2.values.begin(),t2.values.end());
-    removeDuplicates(newTuple->values);
+    if (headerSize < newTuplesSize) {
+        //removeDuplicates(newTuple->values);
+    }
     return newTuple;
 }
 

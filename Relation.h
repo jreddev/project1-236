@@ -38,6 +38,8 @@ public:
     Header *combineHeaders(Header *header1, Header *header2, std::vector<std::pair<int, int>> *commonVals);
 
     void ruleToString();
+
+    Tuple *combineTuples(Tuple t1, Tuple t2, int headerSize);
 };
 
 

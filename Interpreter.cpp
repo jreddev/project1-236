@@ -136,44 +136,84 @@ Relation* Interpreter::findRelation(std::string id){
 
 void Interpreter::evaluateRules() {
     std::cout << "Rule Evaluation" << std::endl;
-    std::vector<Relation*> rulesToEval;
-    int rulesSize = myDatalog.rules.size();
-    for(int i = 0; i < rulesSize; i++) {
-        int predicateSize = myDatalog.rules[i]->bodyPredicates.size();
-        for (int j = 0; j < predicateSize; ++j) {
-            Predicate* p = myDatalog.rules[i]->bodyPredicates[j];
-            Relation* newRelation = evaluatePredicate(p);
-            rulesToEval.push_back(newRelation);
-            //newRelation->toString(); //not sure about this.
-        }
-        Relation *ruleRelation = nullptr;
-        int rulesRelations = rulesToEval.size();
-        if (rulesRelations > 1) {
-            for (int j = 0; j < rulesRelations - 1; ++j) {
-                ruleRelation = rulesToEval[j]->Join2(rulesToEval[j+1],rulesToEval[j]->name);
+    int tuplesAdded = 0;
+    int loop = 0;
+    do {
+        std::vector<Relation *> rulesToEval;
+        int rulesSize = myDatalog.rules.size();
+        for (int i = 0; i < rulesSize; i++) {
+            int predicateSize = myDatalog.rules[i]->bodyPredicates.size();
+            for (int j = 0; j < predicateSize; ++j) {
+                Predicate *p = myDatalog.rules[i]->bodyPredicates[j];
+                Relation *newRelation = evaluatePredicate(p);
+                rulesToEval.push_back(newRelation);
+                //newRelation->toString(); //not sure about this.
             }
-        }
-        if (rulesRelations == 1) {
-            ruleRelation = rulesToEval[0];
-        }
-        //TODO :: project tuples that appear in the head predicate
-        std::vector<int> headIndeces = convertToIndeces(myDatalog.rules[i]->headPredicate->parameterList, ruleRelation);
-        ruleRelation = ruleRelation->project(headIndeces);
-        //std::cout << "got here dude" << std::endl;
-        //TODO :: rename the relation to make it union compatible
+            Relation *ruleRelation = nullptr;
+            int rulesRelations = rulesToEval.size();
+            if (rulesRelations > 1) {
+                for (int j = 0; j < rulesRelations - 1; ++j) {
+                    ruleRelation = rulesToEval[j]->Join2(rulesToEval[j + 1], rulesToEval[j]->name);
 
-        //TODO :: union with the relation in the database
 
-        myDatalog.rules[i]->toString();
-        std::cout << std::endl;
-        ruleRelation->ruleToString();
-    }
+                }
+            }
+            if (rulesRelations == 1) {
+                ruleRelation = rulesToEval[0];
+            }
+
+            myDatalog.rules[i]->toString();
+            std::cout << std::endl;
+
+            //TODO :: project tuples that appear in the head predicate
+            std::vector<int> headIndeces = convertToIndeces(myDatalog.rules[i]->headPredicate->parameterList,
+                                                            ruleRelation);
+            ruleRelation = ruleRelation->project(headIndeces);
+
+            //ruleRelation->name = rulesToEval[i]->name;
+            ruleRelation->name = myDatalog.rules[i]->headPredicate->id;
+            //TODO :: rename the relation to make it union compatible
+            tuplesAdded = unionize(ruleRelation);
+            //TODO :: union with the relation in the database
+            //myDatalog.rules[i]->toString();
+            //std::cout << std::endl;
+            //ruleRelation->ruleToString();
+        }
+        loop ++;
+    } while (tuplesAdded > 0);
     std::cout << std::endl;
     std::cout << "Schemes populated after ";
-    std::cout << "0";
+    std::cout << loop;
     std::cout << " passes through the Rules." << std::endl;
     std::cout << std::endl;
 }
+
+int Interpreter::unionize(Relation* newRelation) {
+    int tuplesAdded = 0;
+    Relation* ogRelation = database.mapOfRelations[newRelation->name];
+    for (Tuple t : newRelation->tuples) {
+        if (ogRelation->tuples.insert(t).second) {
+            tuplesAdded++;
+            //newRelation->ruleToString();
+            int whileNum = 0;
+            int headerSize = newRelation->header->attributes.size();
+            while (whileNum < headerSize) {
+                std::cout << "  " << newRelation->header->attributes[whileNum] << "=" << t.values[whileNum];
+                if (whileNum < (headerSize - 1)) {
+                    std::cout << ", ";
+                }
+                if (whileNum == headerSize - 1) {
+                    std::cout << std::endl;
+                }
+
+
+                whileNum++;
+            }
+        }
+    }
+    return tuplesAdded;
+}
+
 
 std::vector<int> Interpreter::convertToIndeces(std::vector<Parameter *> vector, Relation* ruleRelation) {
     std::vector<int> headIndeces;

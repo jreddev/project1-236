@@ -37,6 +37,8 @@ public:
 
 
     std::vector<int> convertToIndeces(std::vector<Parameter *> vector, Relation *ruleRelation);
+
+    int unionize(Relation *newRelation);
 };
 
 
