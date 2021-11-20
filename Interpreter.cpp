@@ -44,6 +44,7 @@ void Interpreter::initializeFacts() {
 }
 
 void Interpreter::evaluateQueries() {
+    std::cout << "Query Evaluation" << std::endl;
     int queriesSize = myDatalog.queries.size();
     for(int i = 0; i < queriesSize; i++) {
         Predicate* p = myDatalog.queries[i];
@@ -145,29 +146,48 @@ void Interpreter::evaluateRules() {
             rulesToEval.push_back(newRelation);
             //newRelation->toString(); //not sure about this.
         }
-        Relation* ruleRelation;
+        Relation *ruleRelation = nullptr;
         int rulesRelations = rulesToEval.size();
         if (rulesRelations > 1) {
             for (int j = 0; j < rulesRelations - 1; ++j) {
                 ruleRelation = rulesToEval[j]->Join2(rulesToEval[j+1],rulesToEval[j]->name);
             }
         }
+        if (rulesRelations == 1) {
+            ruleRelation = rulesToEval[0];
+        }
         //TODO :: project tuples that appear in the head predicate
         std::vector<int> headIndeces = convertToIndeces(myDatalog.rules[i]->headPredicate->parameterList, ruleRelation);
         ruleRelation = ruleRelation->project(headIndeces);
-        std::cout << "got here dude";
+        //std::cout << "got here dude" << std::endl;
         //TODO :: rename the relation to make it union compatible
 
         //TODO :: union with the relation in the database
+
+        myDatalog.rules[i]->toString();
+        std::cout << std::endl;
+        ruleRelation->ruleToString();
     }
+    std::cout << std::endl;
+    std::cout << "Schemes populated after ";
+    std::cout << "0";
+    std::cout << " passes through the Rules." << std::endl;
+    std::cout << std::endl;
 }
 
 std::vector<int> Interpreter::convertToIndeces(std::vector<Parameter *> vector, Relation* ruleRelation) {
     std::vector<int> headIndeces;
     int vecSize = vector.size();
     int relSize = ruleRelation->header->returnSize();
-    for (int j = 0; j < relSize; ++j) {
+    /*for (int j = 0; j < relSize; ++j) {
         for (int i = 0; i < vecSize; ++i) {
+            if (ruleRelation->header->attributes[j] == vector[i]->p) {
+                headIndeces.push_back(j);
+            }
+        }
+    }*/
+    for (int i = 0; i < vecSize; ++i) {
+        for (int j = 0; j < relSize; ++j) {
             if (ruleRelation->header->attributes[j] == vector[i]->p) {
                 headIndeces.push_back(j);
             }
