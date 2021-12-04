@@ -139,6 +139,7 @@ void Interpreter::evaluateRules() {
     int tuplesAdded = 0;
     int loop = 0;
     do {
+        tuplesAdded = 0;
         std::vector<Relation *> rulesToEval;
         int rulesSize = myDatalog.rules.size();
         for (int i = 0; i < rulesSize; i++) {
@@ -149,13 +150,15 @@ void Interpreter::evaluateRules() {
                 rulesToEval.push_back(newRelation);
                 //newRelation->toString(); //not sure about this.
             }
-            Relation *ruleRelation = nullptr;
+            Relation *ruleRelation = rulesToEval[0];
             int rulesRelations = rulesToEval.size();
             if (rulesRelations > 1) {
-                for (int j = 0; j < rulesRelations - 1; ++j) {
+                /*for (int j = 0; j < rulesRelations - 1; ++j) {
                     ruleRelation = rulesToEval[j]->Join2(rulesToEval[j + 1], rulesToEval[j]->name);
-
-
+                }*/
+                for (int j = 0; j < rulesRelations - 1; ++j) {
+                    ruleRelation = ruleRelation->Join2(rulesToEval[j+1], ruleRelation->name);
+                    //std::cout << j << std::endl;
                 }
             }
             if (rulesRelations == 1) {
@@ -173,7 +176,9 @@ void Interpreter::evaluateRules() {
             //ruleRelation->name = rulesToEval[i]->name;
             ruleRelation->name = myDatalog.rules[i]->headPredicate->id;
             //TODO :: rename the relation to make it union compatible
-            tuplesAdded = unionize(ruleRelation);
+            //tuplesAdded = unionize(ruleRelation);
+            Relation * ogRelation = database.mapOfRelations[ruleRelation->name];
+            tuplesAdded = tuplesAdded + ogRelation->unionize(ruleRelation);
             //TODO :: union with the relation in the database
             //myDatalog.rules[i]->toString();
             //std::cout << std::endl;

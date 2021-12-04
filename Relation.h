@@ -40,6 +40,14 @@ public:
     void ruleToString();
 
     Tuple *combineTuples(Tuple t1, Tuple t2, int headerSize);
+
+    int unionize(Relation *newRelation);
+
+    Tuple *combineTuples(Tuple t1, Tuple t2, int headerSize, std::vector<std::string> commonVals);
+
+    void removeDuplicateTuples(std::vector<std::string> &v, std::vector<std::pair<int, int>> commonVals);
+
+    void removeDuplicateTuples(std::vector<std::string> &v, std::vector<std::string> commonVals);
 };
 
 
