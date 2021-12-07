@@ -208,7 +208,18 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
            for (Tuple t2 : joinMe->tuples) {
                for (int i = 0; i < numCommonVals; ++i) {
                    if (t1.values[commonVals[i].first] == t2.values[commonVals[i].second]) {
-                       Tuple* newTuple = combineTuples(t1,t2,headerSize,commonValsStrings);
+                     //  Tuple* newTuple = combineTuples(t1,t2,headerSize,commonValsStrings);
+                       Tuple* newTuple = new Tuple;
+                       int newTuplesSize = t1.values.size() + t2.values.size();
+                       newTuple->values.reserve(t1.values.size() + t2.values.size());
+                       newTuple->values.insert(newTuple->values.end(),t1.values.begin(),t1.values.end());
+                       if(commonVals[i].second != 0) {
+                           newTuple->values.insert(newTuple->values.end(),t2.values.begin(),t2.values.begin() + commonVals[i].second - 1);
+                       }
+                       newTuple->values.insert(newTuple->values.end(),t2.values.begin() + commonVals[i].second + 1,t2.values.end());
+                       /*if (headerSize < newTuplesSize) {
+                           removeDuplicateTuples(newTuple->values, commonVals);
+                       }*/
                        newRelation->addTuple(*newTuple);
                    }
                }
