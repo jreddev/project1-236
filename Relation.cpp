@@ -67,25 +67,16 @@ Relation* Relation::project(std::vector<int> indices){
 
     Relation* projectRelation = new Relation(name,newHeader);
 
-    int newHeaderSize = newHeader->attributes.size();
+   // int newHeaderSize = newHeader->attributes.size();
 
     for (const Tuple &t : tuples) {
         Tuple newTuple = Tuple();
-        /*for (int i = 0; i < headerSize; i++) {
-            std::string attribute = header->attributes[i];
-            for (int j = 0; j < vectorSize; j++) {
-                int index = indices[j];
-                if (index == i && i < t.values.size()) {
-                    std::string tupleVal = t.values.at(i); //might be j instead of i.. just watch out.
-                    newTuple.values.push_back(tupleVal);
-                }
-            }
-        }*/
         for (int j = 0; j < vectorSize; j++) {
             for (int i = 0; i < headerSize; i++) {
                 std::string attribute = header->attributes[i];
                 int index = indices[j];
-                if (index == i && i < t.values.size()) {
+                int tValSize = t.values.size();
+                if (index == i && i < tValSize) {
                     std::string tupleVal = t.values.at(i); //might be j instead of i.. just watch out.
                     newTuple.values.push_back(tupleVal);
                 }
