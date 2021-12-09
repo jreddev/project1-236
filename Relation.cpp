@@ -152,7 +152,7 @@ void Relation::toString(){
     }
 }
 
-Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
+/*Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
     std::vector<std::pair<int,int>> commonVals;
     std::vector<std::string> commonValsStrings;
     std::vector<int> commonValsInt;
@@ -182,14 +182,15 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
             /*std::pair<int,int> tempPair = std::make_pair(indexVal,i);
             commonVals.push_back(tempPair);
              commanValsStrings.push_back(attribute1);
-            newHeader->attributes.push_back(attribute2); //not sure about this line*/
+            newHeader->attributes.push_back(attribute2); //not sure about this line*//*
         }
         else {
             newHeader->attributes.push_back(attribute2);
         }
     }
     int m = 0;
-    for (int n = 0; n < commonValsInt.size(); ++n) {
+    int commonSize = commonValsInt.size();
+    for (int n = 0; n < commonSize; ++n) {
         for (Tuple t1 : tuples) {
             if (commonValsInt[n] == m) {
                 commonValsStrings.push_back(t1.values.at(m));
@@ -220,7 +221,7 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
                        newTuple->values.insert(newTuple->values.end(),t2.values.begin() + commonVals[i].second + 1,t2.values.end());
                        /*if (headerSize < newTuplesSize) {
                            removeDuplicateTuples(newTuple->values, commonVals);
-                       }*/
+                       }*//*
                        newRelation->addTuple(*newTuple);
                    }
                }
@@ -240,7 +241,7 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
             }
             i++;
         }
-    }*/
+    }*//*
     //--
     else {
         //std::cout << "no common vals, do cross multiply" << std::endl;
@@ -253,9 +254,9 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
     }
 
     return newRelation;
-}
+}*/
 
-Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize, std::vector<std::string> commonVals) {
+/*Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize, std::vector<std::string> commonVals) {
     Tuple* newTuple = new Tuple;
     int newTuplesSize = t1.values.size() + t2.values.size();
     newTuple->values.reserve(t1.values.size() + t2.values.size());
@@ -265,7 +266,7 @@ Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize, std::vector<s
         removeDuplicateTuples(newTuple->values, commonVals);
     }
     return newTuple;
-}
+}*/
 
 int Relation::unionize(Relation* newRelation) {
     int tuplesAdded = 0;
@@ -294,7 +295,7 @@ int Relation::unionize(Relation* newRelation) {
     return tuplesAdded;
 }
 
-Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize) {
+/*Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize) {
     Tuple* newTuple = new Tuple;
     int newTuplesSize = t1.values.size() + t2.values.size();
     newTuple->values.reserve(t1.values.size() + t2.values.size());
@@ -302,11 +303,13 @@ Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize) {
     newTuple->values.insert(newTuple->values.end(),t2.values.begin(),t2.values.end());
     return newTuple;
 }
-
-void Relation::removeDuplicateTuples(std::vector<std::string> &v, std::vector<std::string> commonVals){
+*/
+/*void Relation::removeDuplicateTuples(std::vector<std::string> &v, std::vector<std::string> commonVals){
     std::set<std::string> seen;
-    for (int i = 0; i < v.size(); ++i) {
-        for (int j = 0; j < commonVals.size(); ++j) {
+    int vSize = v.size();
+    for (int i = 0; i < vSize; ++i) {
+        int comValSize = commonVals.size();
+        for (int j = 0; j < comValSize; ++j) {
             if (v[i] == commonVals[j]) {
                 if (seen.insert(v[i]).second) {
                     //std::cout << "test first seen" << std::endl;
@@ -317,7 +320,7 @@ void Relation::removeDuplicateTuples(std::vector<std::string> &v, std::vector<st
             }
         }
     }
-}
+}*/
 
 Relation* Relation::Join(Relation* joinMe, std::string ruleName){
     std::vector<int> rel1pairVals;
@@ -398,10 +401,12 @@ Relation* Relation::Join(Relation* joinMe, std::string ruleName){
                     //if (rel1pairVals[0] == tVal1 && rel2pairVals[0] == tVal2) {
                     if (t1.values[rel1pairVals[0]] == t2.values[rel2pairVals[0]]) {
                         Tuple *newTuple = new Tuple();
-                        for (int i = 0; i < t1.values.size(); ++i) {
+                        int t1size = t1.values.size();
+                        for (int i = 0; i < t1size; ++i) {
                             newTuple->values.push_back(t1.values[i]);
                         }
-                        for (int i = 0; i < rel2nonMatchVals.size(); ++i) {
+                        int t2size = rel2nonMatchVals.size();
+                        for (int i = 0; i < t2size; ++i) {
                             newTuple->values.push_back(t2.values[rel2nonMatchVals[i]]);
                         }
                         newRelation->addTuple(*newTuple);
@@ -421,10 +426,12 @@ Relation* Relation::Join(Relation* joinMe, std::string ruleName){
         for (Tuple t1 : tuples) {
             for (Tuple t2 : joinMe->tuples) {
                 Tuple *newTuple = new Tuple();
-                for (int i = 0; i < t1.values.size(); ++i) {
+                int t1size = t1.values.size();
+                for (int i = 0; i < t1size; ++i) {
                     newTuple->values.push_back(t1.values[i]);
                 }
-                for (int i = 0; i < t2.values.size(); ++i) {
+                int t2size = t2.values.size();
+                for (int i = 0; t2size; ++i) {
                     newTuple->values.push_back(t2.values[i]);
                 }
                 newRelation->addTuple(*newTuple);
