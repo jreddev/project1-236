@@ -152,122 +152,6 @@ void Relation::toString(){
     }
 }
 
-/*Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
-    std::vector<std::pair<int,int>> commonVals;
-    std::vector<std::string> commonValsStrings;
-    std::vector<int> commonValsInt;
-    Header* newHeader = new Header();
-    Header* header2 = joinMe->header;
-    int header1Size = this->header->returnSize();
-    for (int i = 0; i < header1Size; i++) {
-        std::string attribute1 = header->attributes[i];
-        int indexVal = header2->find(attribute1);
-        if(indexVal != -1) {
-            //std::cout << attribute1 << " is a common element." << std::endl;
-            std::pair<int,int> tempPair = std::make_pair(i,indexVal);
-            commonVals.push_back(tempPair);
-            commonValsInt.push_back(i);
-            newHeader->attributes.push_back(attribute1);
-        }
-        else {
-            newHeader->attributes.push_back(attribute1);
-        }
-    }
-    int header2Size = header2->returnSize();
-    for (int i = 0; i < header2Size; i++) {
-        std::string attribute2 = header2->attributes[i];//Just so I remember, I changed this from header-attributes[i] to just attributes[i].
-        int indexVal = header->find(attribute2);
-        if(indexVal != -1) {
-            //std::cout << attribute2 << " is a common element." << std::endl;
-            /*std::pair<int,int> tempPair = std::make_pair(indexVal,i);
-            commonVals.push_back(tempPair);
-             commanValsStrings.push_back(attribute1);
-            newHeader->attributes.push_back(attribute2); //not sure about this line*//*
-        }
-        else {
-            newHeader->attributes.push_back(attribute2);
-        }
-    }
-    int m = 0;
-    int commonSize = commonValsInt.size();
-    for (int n = 0; n < commonSize; ++n) {
-        for (Tuple t1 : tuples) {
-            if (commonValsInt[n] == m) {
-                commonValsStrings.push_back(t1.values.at(m));
-            }
-            m++;
-        }
-    }
-
-    Relation* newRelation = new Relation(ruleName,newHeader);
-    bool joinAble = false;
-    int numCommonVals = commonVals.size();
-    int headerSize = newHeader->returnSize();
-    //--
-    if (numCommonVals > 0) {
-       for (Tuple t1 : tuples) {
-           \
-           for (Tuple t2 : joinMe->tuples) {
-               for (int i = 0; i < numCommonVals; ++i) {
-                   if (t1.values[commonVals[i].first] == t2.values[commonVals[i].second]) {
-                     //  Tuple* newTuple = combineTuples(t1,t2,headerSize,commonValsStrings);
-                       Tuple* newTuple = new Tuple;
-                       int newTuplesSize = t1.values.size() + t2.values.size();
-                       newTuple->values.reserve(t1.values.size() + t2.values.size());
-                       newTuple->values.insert(newTuple->values.end(),t1.values.begin(),t1.values.end());
-                       if(commonVals[i].second != 0) {
-                           newTuple->values.insert(newTuple->values.end(),t2.values.begin(),t2.values.begin() + commonVals[i].second - 1);
-                       }
-                       newTuple->values.insert(newTuple->values.end(),t2.values.begin() + commonVals[i].second + 1,t2.values.end());
-                       /*if (headerSize < newTuplesSize) {
-                           removeDuplicateTuples(newTuple->values, commonVals);
-                       }*//*
-                       newRelation->addTuple(*newTuple);
-                   }
-               }
-           }
-       }
-    }
-    /**if (numCommonVals > 0) {
-        int i = 0;
-        int j = 0;
-        for (Tuple t1 : tuples) {
-            for (Tuple t2 : joinMe->tuples) {
-                if (t1.values[commonVals[i].first] == t2.values[commonVals[i].second]) {
-                    Tuple* newTuple = combineTuples(t1,t2,headerSize,commonValsStrings);
-                    newRelation->addTuple(*newTuple);
-                }
-                j++;
-            }
-            i++;
-        }
-    }*//*
-    //--
-    else {
-        //std::cout << "no common vals, do cross multiply" << std::endl;
-        for (Tuple t1 : tuples) {
-            for (Tuple t2 : joinMe->tuples) {
-                Tuple* newTuple = combineTuples(t1,t2,headerSize);
-                newRelation->addTuple(*newTuple);
-            }
-        }
-    }
-
-    return newRelation;
-}*/
-
-/*Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize, std::vector<std::string> commonVals) {
-    Tuple* newTuple = new Tuple;
-    int newTuplesSize = t1.values.size() + t2.values.size();
-    newTuple->values.reserve(t1.values.size() + t2.values.size());
-    newTuple->values.insert(newTuple->values.end(),t1.values.begin(),t1.values.end());
-    newTuple->values.insert(newTuple->values.end(),t2.values.begin(),t2.values.end());
-    if (headerSize < newTuplesSize) {
-        removeDuplicateTuples(newTuple->values, commonVals);
-    }
-    return newTuple;
-}*/
-
 int Relation::unionize(Relation* newRelation) {
     int tuplesAdded = 0;
     Relation* ogRelation = this;
@@ -295,33 +179,6 @@ int Relation::unionize(Relation* newRelation) {
     return tuplesAdded;
 }
 
-/*Tuple *Relation::combineTuples(Tuple t1, Tuple t2, int headerSize) {
-    Tuple* newTuple = new Tuple;
-    int newTuplesSize = t1.values.size() + t2.values.size();
-    newTuple->values.reserve(t1.values.size() + t2.values.size());
-    newTuple->values.insert(newTuple->values.end(),t1.values.begin(),t1.values.end());
-    newTuple->values.insert(newTuple->values.end(),t2.values.begin(),t2.values.end());
-    return newTuple;
-}
-*/
-/*void Relation::removeDuplicateTuples(std::vector<std::string> &v, std::vector<std::string> commonVals){
-    std::set<std::string> seen;
-    int vSize = v.size();
-    for (int i = 0; i < vSize; ++i) {
-        int comValSize = commonVals.size();
-        for (int j = 0; j < comValSize; ++j) {
-            if (v[i] == commonVals[j]) {
-                if (seen.insert(v[i]).second) {
-                    //std::cout << "test first seen" << std::endl;
-                }
-                else {
-                    v.erase(v.begin() + i -1);
-                }
-            }
-        }
-    }
-}*/
-
 Relation* Relation::Join(Relation* joinMe, std::string ruleName){
     std::vector<int> rel1pairVals;
     std::vector<int> rel2pairVals;
@@ -330,32 +187,6 @@ Relation* Relation::Join(Relation* joinMe, std::string ruleName){
     int rel2loopVal = joinMe->header->returnSize();
 
     Header* newHeader = new Header;
-    /*for (int i = 0; i < rel1loopVal; ++i) {
-        std::string rel1attribute = header->attributes[i];
-        int indexVal = joinMe->header->find(rel1attribute);
-        if (indexVal != -1) {
-            rel1pairVals.push_back(i);
-            rel2pairVals.push_back(indexVal);
-            newHeader->attributes.push_back(rel1attribute);
-        }
-        else {
-            newHeader->attributes.push_back(rel1attribute);
-        }
-    }
-    for (int i = 0; i < rel2loopVal; ++i) {
-        std::string rel2attribute = joinMe->header->attributes[i];
-        int indexVal = header->find(rel2attribute);
-        if (indexVal == -1) {
-            //rel1pairVals.push_back(i);
-            //rel2pairVals.push_back(indexVal);
-
-            newHeader->attributes.push_back(rel2attribute);
-        }
-        else {
-            rel2nonMatchVals.push_back(indexVal);
-            //newHeader->attributes.push_back(rel2attribute);
-        }
-    }*/
 
     for (int i = 0; i < rel1loopVal; ++i) {
         bool pairFound = false;
@@ -441,24 +272,3 @@ Relation* Relation::Join(Relation* joinMe, std::string ruleName){
 
     return newRelation;
 }
-
-
-
-/*for (int i = 0; i < header->returnSize(); ++i) {
-    newHeader->attributes.push_back(header->attributes[i]);
-}
-rel1loopVal = newHeader->returnSize();
-for (int i = 0; i < rel1loopVal; ++i) {
-    for (int j = 0; j < rel2loopVal; ++j) {
-        if (newHeader->attributes[i] == joinMe->header->attributes[j]) {
-            //add matching indices to vectors
-            rel1pairVals.push_back(i);
-            rel2pairVals.push_back(j);
-        }
-        else {
-            newHeader->attributes.push_back(joinMe->header->attributes[j]);
-            rel2nonMatchVals.push_back(j);
-        }
-    }
-}*/
-
