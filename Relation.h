@@ -48,6 +48,10 @@ public:
     void removeDuplicateTuples(std::vector<std::string> &v, std::vector<std::pair<int, int>> commonVals);
 
     void removeDuplicateTuples(std::vector<std::string> &v, std::vector<std::string> commonVals);
+
+    void unite(Relation relation1);
+
+    Relation join3(Relation relation1, Relation relation2);
 };
 
 

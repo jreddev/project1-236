@@ -140,24 +140,30 @@ void Interpreter::evaluateRules() {
     int loop = 0;
     do {
         tuplesAdded = 0;
-        std::vector<Relation *> rulesToEval;
+
         int rulesSize = myDatalog.rules.size();
         for (int i = 0; i < rulesSize; i++) {
+            std::vector<Relation *> rulesToEval;
             int predicateSize = myDatalog.rules[i]->bodyPredicates.size();
             for (int j = 0; j < predicateSize; ++j) {
                 Predicate *p = myDatalog.rules[i]->bodyPredicates[j];
                 Relation *newRelation = evaluatePredicate(p);
                 rulesToEval.push_back(newRelation);
-                //newRelation->toString(); //not sure about this.
+
+
+
             }
             Relation *ruleRelation = rulesToEval[0];
             int rulesRelations = rulesToEval.size();
-            if (rulesRelations > 1) {
-                /*for (int j = 0; j < rulesRelations - 1; ++j) {
-                    ruleRelation = rulesToEval[j]->Join2(rulesToEval[j + 1], rulesToEval[j]->name);
-                }*/
+            /*if (rulesRelations == 2) {
                 for (int j = 0; j < rulesRelations - 1; ++j) {
-                    ruleRelation = ruleRelation->Join2(rulesToEval[j+1], ruleRelation->name);
+                    ruleRelation = rulesToEval[j]->Join(rulesToEval[j + 1], rulesToEval[j]->name);
+                }
+            }*/
+            if (rulesRelations > 1) {
+                for (int j = 0; j < rulesRelations - 1; ++j) {
+                    rulesToEval[j+1] = rulesToEval[j]->Join(rulesToEval[j+1], myDatalog.rules[i]->headPredicate->id);
+                    ruleRelation = rulesToEval[j+1];
                     //std::cout << j << std::endl;
                 }
             }

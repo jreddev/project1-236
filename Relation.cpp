@@ -156,7 +156,7 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
     std::vector<std::pair<int,int>> commonVals;
     std::vector<std::string> commonValsStrings;
     std::vector<int> commonValsInt;
-    Header* newHeader = new Header;
+    Header* newHeader = new Header();
     Header* header2 = joinMe->header;
     int header1Size = this->header->returnSize();
     for (int i = 0; i < header1Size; i++) {
@@ -205,6 +205,7 @@ Relation* Relation::Join2(Relation* joinMe, std::string ruleName){
     //--
     if (numCommonVals > 0) {
        for (Tuple t1 : tuples) {
+           \
            for (Tuple t2 : joinMe->tuples) {
                for (int i = 0; i < numCommonVals; ++i) {
                    if (t1.values[commonVals[i].first] == t2.values[commonVals[i].second]) {
@@ -282,6 +283,7 @@ int Relation::unionize(Relation* newRelation) {
                 }
                 if (whileNum == headerSize - 1) {
                     std::cout << std::endl;
+
                 }
 
 
@@ -316,3 +318,140 @@ void Relation::removeDuplicateTuples(std::vector<std::string> &v, std::vector<st
         }
     }
 }
+
+Relation* Relation::Join(Relation* joinMe, std::string ruleName){
+    std::vector<int> rel1pairVals;
+    std::vector<int> rel2pairVals;
+    std::vector<int> rel2nonMatchVals;
+    int rel1loopVal = this->header->returnSize();
+    int rel2loopVal = joinMe->header->returnSize();
+
+    Header* newHeader = new Header;
+    /*for (int i = 0; i < rel1loopVal; ++i) {
+        std::string rel1attribute = header->attributes[i];
+        int indexVal = joinMe->header->find(rel1attribute);
+        if (indexVal != -1) {
+            rel1pairVals.push_back(i);
+            rel2pairVals.push_back(indexVal);
+            newHeader->attributes.push_back(rel1attribute);
+        }
+        else {
+            newHeader->attributes.push_back(rel1attribute);
+        }
+    }
+    for (int i = 0; i < rel2loopVal; ++i) {
+        std::string rel2attribute = joinMe->header->attributes[i];
+        int indexVal = header->find(rel2attribute);
+        if (indexVal == -1) {
+            //rel1pairVals.push_back(i);
+            //rel2pairVals.push_back(indexVal);
+
+            newHeader->attributes.push_back(rel2attribute);
+        }
+        else {
+            rel2nonMatchVals.push_back(indexVal);
+            //newHeader->attributes.push_back(rel2attribute);
+        }
+    }*/
+
+    for (int i = 0; i < rel1loopVal; ++i) {
+        bool pairFound = false;
+        for (int j = 0; j < rel2loopVal; ++j) {
+            if  (header->attributes[i] == joinMe->header->attributes[j]) {
+                rel1pairVals.push_back(i);
+                rel2pairVals.push_back(j);
+                newHeader->attributes.push_back(header->attributes[i]);
+                pairFound = true;
+            }
+        }
+        if (!pairFound) {
+            newHeader->attributes.push_back(header->attributes[i]);
+        }
+    }
+    for (int i = 0; i < rel2loopVal; ++i) {
+        bool pairFound = false;
+        for (int j = 0; j < rel1loopVal; ++j) {
+            if  (header->attributes[j] == joinMe->header->attributes[i]) {
+                //rel1pairVals.push_back(i);
+                //rel2pairVals.push_back(j);
+                //newHeader->attributes.push_back(header->attributes[i]);
+                pairFound = true;
+            }
+
+        }
+        if (!pairFound) {
+            newHeader->attributes.push_back(joinMe->header->attributes[i]);
+            rel2nonMatchVals.push_back(i);
+        }
+    }
+
+
+
+
+    Relation* newRelation = new Relation(ruleName, newHeader);
+    int tVal1 = 0;
+    if (!rel1pairVals.empty()) {
+        for (Tuple t1 : tuples) {
+            int tVal2 = 0;
+            for (Tuple t2 : joinMe->tuples) {
+                if (!rel1pairVals.empty() && !rel2pairVals.empty()) {
+                    //if (rel1pairVals[0] == tVal1 && rel2pairVals[0] == tVal2) {
+                    if (t1.values[rel1pairVals[0]] == t2.values[rel2pairVals[0]]) {
+                        Tuple *newTuple = new Tuple();
+                        for (int i = 0; i < t1.values.size(); ++i) {
+                            newTuple->values.push_back(t1.values[i]);
+                        }
+                        for (int i = 0; i < rel2nonMatchVals.size(); ++i) {
+                            newTuple->values.push_back(t2.values[rel2nonMatchVals[i]]);
+                        }
+                        newRelation->addTuple(*newTuple);
+                        //rel2pairVals.pop_back();
+                        //rel1pairVals.pop_back();
+                    }
+                    //}
+                }
+
+
+                tVal2++;
+            }
+            tVal1++;
+        }
+    }
+    else {
+        for (Tuple t1 : tuples) {
+            for (Tuple t2 : joinMe->tuples) {
+                Tuple *newTuple = new Tuple();
+                for (int i = 0; i < t1.values.size(); ++i) {
+                    newTuple->values.push_back(t1.values[i]);
+                }
+                for (int i = 0; i < t2.values.size(); ++i) {
+                    newTuple->values.push_back(t2.values[i]);
+                }
+                newRelation->addTuple(*newTuple);
+            }
+        }
+    }
+
+    return newRelation;
+}
+
+
+
+/*for (int i = 0; i < header->returnSize(); ++i) {
+    newHeader->attributes.push_back(header->attributes[i]);
+}
+rel1loopVal = newHeader->returnSize();
+for (int i = 0; i < rel1loopVal; ++i) {
+    for (int j = 0; j < rel2loopVal; ++j) {
+        if (newHeader->attributes[i] == joinMe->header->attributes[j]) {
+            //add matching indices to vectors
+            rel1pairVals.push_back(i);
+            rel2pairVals.push_back(j);
+        }
+        else {
+            newHeader->attributes.push_back(joinMe->header->attributes[j]);
+            rel2nonMatchVals.push_back(j);
+        }
+    }
+}*/
+
