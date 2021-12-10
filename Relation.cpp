@@ -221,7 +221,7 @@ Relation* Relation::Join(Relation* joinMe, std::string ruleName){
             for (Tuple t2 : joinMe->tuples) {
                 if (!rel1pairVals.empty() && !rel2pairVals.empty()) {
                     //if (rel1pairVals[0] == tVal1 && rel2pairVals[0] == tVal2) {
-                    if (t1.values[rel1pairVals[0]] == t2.values[rel2pairVals[0]]) {
+                    if (rel1pairVals.size() == 1 && t1.values[rel1pairVals[0]] == t2.values[rel2pairVals[0]]) {
                         Tuple *newTuple = new Tuple();
                         int t1size = t1.values.size();
                         for (int i = 0; i < t1size; ++i) {
@@ -234,6 +234,18 @@ Relation* Relation::Join(Relation* joinMe, std::string ruleName){
                         newRelation->addTuple(*newTuple);
                         //rel2pairVals.pop_back();
                         //rel1pairVals.pop_back();
+                    }
+                    else if (rel1pairVals.size() == 2 && t1.values[rel1pairVals[0]] == t2.values[rel2pairVals[0]] && t1.values[rel1pairVals[1]] == t2.values[rel2pairVals[1]]) {
+                        Tuple *newTuple = new Tuple();
+                        int t1size = t1.values.size();
+                        for (int i = 0; i < t1size; ++i) {
+                            newTuple->values.push_back(t1.values[i]);
+                        }
+                        int t2size = rel2nonMatchVals.size();
+                        for (int i = 0; i < t2size; ++i) {
+                            newTuple->values.push_back(t2.values[rel2nonMatchVals[i]]);
+                        }
+                        newRelation->addTuple(*newTuple);
                     }
                     //}
                 }
