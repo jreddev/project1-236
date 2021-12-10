@@ -253,7 +253,7 @@ Relation* Relation::Join(Relation* joinMe, std::string ruleName){
                     newTuple->values.push_back(t1.values[i]);
                 }
                 int t2size = t2.values.size();
-                for (int i = 0; t2size; ++i) {
+                for (int i = 0; i < t2size; ++i) {
                     newTuple->values.push_back(t2.values[i]);
                 }
                 newRelation->addTuple(*newTuple);
